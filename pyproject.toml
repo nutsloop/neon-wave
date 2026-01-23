@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "neon-wave"
-version = "1.0.0"
+version = "1.0.1"
 description = "Neon Wave Sphinx theme with neon grid styling"
 readme = "README.md"
 license = "Apache-2.0"
@@ -36,26 +36,11 @@ Homepage = "https://github.com/nutsloop/neon-wave"
 Documentation = "https://github.com/nutsloop/neon-wave#readme"
 
 [tool.hatch.build.targets.wheel]
-sources = {"src" = ""}
-only-include = [
-    "neon_wave.py",
-    "theme.conf",
-    "layout.html",
-    "sidebar.html",
-    "effects-toggle.html",
-    "theme-toggle.html",
-    "static",
-]
+sources = ["src"]
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "src/neon_wave.py",
-    "src/theme.conf",
-    "src/layout.html",
-    "src/sidebar.html",
-    "src/effects-toggle.html",
-    "src/theme-toggle.html",
-    "src/static/**",
+    "src/neon_wave/**",
     "README.md",
     "LICENSE",
 ]
